@@ -1,38 +1,66 @@
-.App {
+.App{
+  padding: 1rem 5rem;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App h1{
+  text-decoration-line: underline;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+ /* Style for current tasks */
+ .current {
+  color: black;
+  text-align: center;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+}
+.cursorPointer{
+  cursor: pointer;
+}
+
+/* Style for completed tasks */
+.completed {
+  text-decoration: line-through;
+  color: green;
+}
+
+/* Style for cancelled tasks */
+.cancelled {
+  text-decoration: line-through;
+  color: red;
+}
+.main-div{
+  display: flex;
+  justify-content: space-between;
+}
+
+.input {
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: #f0f0f0;
+  border-radius: 20px;
+  box-shadow: 5px 5px 10px #bebebe, 
+              -5px -5px 10px #ffffff;
+  padding: 10px;
+  width: 300px;
 }
 
-.App-link {
-  color: #61dafb;
+.input input[type="text"] {
+  border: none;
+  background-color: #f0f0f0;
+  outline: none;
+  flex: 1;
+  font-size: 1.2rem;
+  padding: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.input i {
+  color: #888888;
+  font-size: 1.2rem;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.input i:hover {
+  color: #555555;
 }
